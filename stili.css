@@ -659,3 +659,42 @@ top:-1px;
   opacity: 0.3;
   font-size: 15px;
 }
+.slideshow-container{
+
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+  display: flex;
+  justify-content: center;
+
+}
+.mySlides{
+  width: 30%;
+}
+.img9ci{
+  height: 50%;
+  width: 100%;
+}
+.text {
+
+color: #fcfcfc;
+font-size: 15px;
+text-align: center;
+}
+.dot {
+cursor: pointer;
+height: 15px;
+width: 15px;
+margin: 0 2px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+background-color: #717171;
+}
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+.text {font-size: 11px}
+}
