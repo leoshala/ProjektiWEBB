@@ -5,7 +5,7 @@
         "surname"=> "Bpshnjaku",
         "email"=>"elton@hotmail.com",
         "username"=>"eltonboshnjaku",
-        "password"=>"elton123",
+        "password"=>"Elton123",
         "role"=>"user"
     ];
 
