@@ -36,7 +36,7 @@ if(!isset($_SESSION['email'])){
             <a href="logout.php">Log out</a>
     <a href="dashboard.php" class="<?php echo $hide ?>">Dashboard</a>
     <?php
-    echo "Email: ".$_SESSION['email'];
+    echo "UserName: ".$_SESSION['username'];
     ?>
         </ul>
         </div>
