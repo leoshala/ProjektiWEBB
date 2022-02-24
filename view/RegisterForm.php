@@ -96,13 +96,14 @@
                     event.preventDefault();
                 }
             }
-            if(email1 == "" || email1 == null){
-                EmailMsg1.innerText="Fill Email field!";
+            if(email1 == "" || email1 == null || email1 != email){
+                EmailMsg1.innerText="Repaet or fill Email fielld";
                 event.preventDefault();
+                
             }else{
-                if(emailRegex1.test(email1)){
+                if(emailRegex1.test(email1) ){
                     EmailMsg1.innerText="";
-                }else{
+                }else {
                     EmailMsg1.innerText="Email was not written correctly!";
                     event.preventDefault();
                 }
@@ -120,8 +121,8 @@
                 }
             }  
 
-            if(password1 == "" || password1 == null || password1 <8){
-                passwordMsg1.innerText="Fill password field!";
+            if(password1 == "" || password1 == null || password1 <8 || password1 != password){
+                passwordMsg1.innerText="Repeat or fill password !";
                 event.preventDefault();
             }else{
                 if(passwordRegex1.test(password1)){
