@@ -16,13 +16,15 @@ if(isset($_POST['loginBtn'])){
             if($email == $user['email'] && $password == $user['password']){
                 echo $email;
                 echo $password;
+                
 
                 session_start();
                  $_SESSION['email'] = $email;
                  $_SESSION['password'] = $password;
                  $_SESSION['role'] = $user['role'];
+                 $_SESSION['username'] = $user['username'];
 
-                 header("location:home.php");
+                 header("location:About.php");
                 exit();
             }else{
                 echo "incorect email or password";
