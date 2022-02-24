@@ -1,11 +1,11 @@
 <?php
 
     $user1=[
-        "name"=>"Elton",
-        "surname"=> "Bpshnjaku",
-        "email"=>"elton@hotmail.com",
-        "username"=>"eltonboshnjaku",
-        "password"=>"Elton123",
+        "name"=>"filan",
+        "surname"=> "fisteku",
+        "email"=>"filan@hotmail.com",
+        "username"=>"FilanFisteku321",
+        "password"=>"Filan123",
         "role"=>"user"
     ];
 
