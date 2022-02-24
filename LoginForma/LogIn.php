@@ -1,3 +1,12 @@
+<?php
+session_start();
+if(isset($_SESSION['email'])){
+header('location:home.php');
+}else{
+
+
+?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +16,7 @@
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
-            <form class="form" action="">
+            <form class="form" action="LogIn.php" method="post">
                 <h1>Log In to OLEKS</h1>
                 <div class="div1">
                 <input class="inputstil" type="text"  name="email" placeholder="Email..." id="email">
@@ -19,7 +28,7 @@
                 <br>
                 <label style="color: red;" id="passwordMsg"></label>
                 <br>
-                <input type="submit" value="LOGIN" class="login" id="loginjs">
+                <input type="submit" name="loginBtn" value="LOGIN" class="login" id="loginjs">
                 <br>
                 <div class="forgot">
                 <label class="checkbox">
@@ -38,7 +47,11 @@
                 <div><p class="dont">Dont have an account?</p>
                 <a href="RegisterForm.html">Sign Up</a></div>
             </form>
+<?php
+     require_once 'loginValidate.php';
      
+?>
+ 
     </main>
     <script>
    var button = document.getElementById("loginjs");
@@ -85,3 +98,6 @@
     </script>
 </body>
 </html>
+<?php
+}
+?>

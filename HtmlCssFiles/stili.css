@@ -53,7 +53,7 @@ box-sizing: border-box;
       margin-right:20px;
     }
     .main1{
-      background-image: url("img/img1.webp");
+      background-image: url("../img/img1.webp");
      align-items:center;
      position: relative;
      background-size: cover;
