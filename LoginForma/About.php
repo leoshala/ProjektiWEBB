@@ -25,24 +25,23 @@ if(!isset($_SESSION['email'])){
     <div id="header">
         <div id="headM">
        <ul>
-           <li>OLEKS</li>
+         <li>  <a href="../HtmlCssFiles/index.html">OLEKS</a></li>
        </ul>
    </div>
            <div id="headD">
         <ul>
-            <li><a href="About.html">About Us</a></li>
+            <li><a href="About.php">About Us</a></li>
             <li><a href="#">Search</a></li>
             <li><a href="#">Cart</a></li>
-            <a href="logout.php">Log out</a>
-    <a href="dashboard.php" class="<?php echo $hide ?>">Dashboard</a>
-    <?php
-    echo "UserName: ".$_SESSION['username'];
-    ?>
+            <li> <a href="logout.php">Log out</a></li> 
+             <li><a href="dashboard.php" class="<?php echo $hide ?>">Dashboard</a></li> 
         </ul>
         </div>
         <div class="signin">
         <ul>
-            <li><a href="LogIn.html">Sing in</a></li>
+            <li><a href=""><?php
+    echo "UserName: ".$_SESSION['username'];
+    ?></a></li>
         </ul>
     </div>
         
