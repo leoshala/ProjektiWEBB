@@ -5,7 +5,7 @@ if(!isset($_SESSION['email'])){
     header("location:LogIn.php");
 }else{
     if($_SESSION['role'] != "admin"){
-        header("location:home.php");
+        header("location:About.php");
     }
 
 
