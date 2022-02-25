@@ -14,9 +14,10 @@ if(isset($_POST['registerBtn'])){
         $password = $_POST['password'];
         $birthday = $_POST['birthday'];
         $tel = $_POST['tel'];
-        $id = $username.rand(100,999);
+        $id = rand(100,999);
+        
 
-        $user  = new User($id,$name,$surname,$email,$username,$password,$birthday,$tel);
+        $user  = new User($id,$name,$surname,$username,$email,$password,$birthday,$tel);
         $userRepository = new UserRepository();
 
         $userRepository->insertUser($user);

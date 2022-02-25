@@ -26,8 +26,8 @@ if(!isset($_SESSION['email'])){
             <th>ID</th>
             <th>NAME</th>
             <TH>SURNAME</TH>
-            <th>EMAIL</th>
             <th>USERNAME</th>
+            <th>EMAIL</th>
             <th>PASSWORD</th>
             <th>BIRTHDAY</th>
             <TH>TEL</TH>

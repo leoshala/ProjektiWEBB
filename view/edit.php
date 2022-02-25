@@ -65,8 +65,8 @@ if(isset($_POST['saveBtn'])){
  $birthday = $_POST['birthday'];
  $tel = $_POST['tel'];
 
- $userRepository->updateUser([$id,$name,$surname,$email,$username,$password,$birthday,$tel]);
- header("location:dashboard.php");
+ $userRepository->updateUser($id,$name,$surname,$username,$email,$password,$birthday,$tel);
+// header("location:dashboard.php");
 }
 
 

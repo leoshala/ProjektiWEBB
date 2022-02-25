@@ -17,13 +17,13 @@ class UserRepository{
         $id = $user->getId();
         $name = $user->getName();
         $surname = $user->getSurname();
-        $email = $user->getEmail();
         $username = $user->getUsername();
+        $email = $user->getEmail();   
         $password = $user->getPassword();
         $birthday = $user->getBirthday();
         $tel = $user->getTel();
 
-        $sql = "INSERT INTO user (id,name,surname,email,username,password,birthday,tel) VALUES (?,?,?,?,?,?,?,?)";
+        $sql = "INSERT INTO user (id,name,surname,username,email,password,birthday,tel) VALUES (?,?,?,?,?,?,?,?)";
 
         $statement = $conn->prepare($sql);
 
@@ -55,7 +55,7 @@ class UserRepository{
         return $user;
     }
 
-    function updateUser($id,$name,$surname,$email,$username,$password,$birthday,$tel){
+    function updateUser($id,$name,$surname,$username,$email,$password,$birthday,$tel){
 
             $conn = $this->connection;
 
@@ -63,11 +63,12 @@ class UserRepository{
 
             $statement = $conn->prepare($sql);
 
-            $statement->execute([$id,$name,$surname,$username,$email,$password,$birthday,$tel,$id]);
+            $statement->execute([$name,$surname,$username,$email,$password,$birthday,$tel,$id]);
     
             echo "<script>alert('update was successful');</script>";
     
         }
+        
 
         function deleteUser($id){
             $conn = $this->connection;
