@@ -1,5 +1,8 @@
 body {
+  box-sizing: border-box;
   margin: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .bg {
@@ -103,7 +106,6 @@ h1 {
 }
 .news {
   margin-bottom: 20px;
- 
 }
 .news img {
   width: 100%;
@@ -112,4 +114,19 @@ h1 {
   color: grey;
   font-family: Arial;
   font-weight: bold;
+}
+.get {
+  border: 2px solid rgb(31, 11, 105);
+  color: rgb(231, 224, 224);
+  background-image: linear-gradient(281deg, #546085, #4d04a0);
+  border-radius: 25px;
+  width: 40%;
+  text-align: center;
+  margin-left: 30%;
+}
+.aget {
+  color: #fff;
+}
+a {
+  text-decoration: none;
 }
