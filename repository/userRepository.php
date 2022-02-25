@@ -21,15 +21,15 @@ include_once '../Database/databaseConnection.php';
             $username = $user->getUsername();
             $email = $user->getEmail();
             $password = $user->getPassword();
-            $birthday = $user->getBirthday();
-            $tel = $user->getTel();
+          //  $birthday = $user->getBirthday();
+           // $tel = $user->getTel();
 
 
-            $sql = "INSERT INTO user (id,name,surname,username,email,password,birthday,tel) VALUES (?,?,?,?,?,?,?,?)";
+            $sql = "INSERT INTO user (id,name,surname,username,email,password/*birthday,tel*/) VALUES (?,?,?,?,?,?)";
         
             $statement = $conn->prepare($sql);
 
-     //   $statement->execute([$id,$name,$surname,$username,$email,$password,$birthday,$tel]);
+        $statement->execute($id,$name,$surname,$username,$email,$password/*$birthday,$tel]*/);
 
     // $statement->execute(['123','leo','shala','leoshala','leon@hasf.com','leo1234','2000/05/05','04912412']);
         
