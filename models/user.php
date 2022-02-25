@@ -7,15 +7,20 @@ class User{
     private $email;
     private $username;
     private $password;
+   private $birthday;
+    private $tel;
 
 
-    function __construct($id,$name,$surname,$email,$username,$password){
+    function __construct($id,$name,$surname,$email,$username,$password,$birthday,$tel){
             $this->id = $id;
             $this->name = $name;
             $this->surname = $surname;
             $this->email = $email;
             $this->username = $username;
             $this->password = $password;
+            $this->birthday = $birthday;
+            $this->tel=$tel;
+            
     }
 
 
@@ -36,6 +41,12 @@ class User{
     }
     function getPassword(){
         return $this->password;
+    }
+    function getBirthday(){
+        return $this->birthday;
+    }
+    function getTel(){
+        return $this->tel;
     }
 }
 

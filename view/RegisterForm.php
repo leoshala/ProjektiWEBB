@@ -44,42 +44,6 @@
         </div>
 </div>
     </form>
-<!--<form action="" method="post" class="form" >
-    <div class="form2">
-    <div class="form1">
-        <p>RegisterForm</p>
-    <p>Name:</p>
-    <input type="text" name="name" id="name">
-    <label style="color: red;" id="nameMsg"></label>
-    <p>Surname:</p>
-    <input type="text" name="surname" id="surname">
-    <label style="color: red;" id="surnameMsg"></label>
-    <p>Username:</p>
-    <input type="text" name="username" id="username">
-    <label style="color: red;" id="usernameMsg"></label>
-    <p>Email:</p>
-    <input type="email" name="email" id="email">
-    <label style="color: red;" id="EmailMsg"></label>-->
- <!--   <p>Repeat Email:</p>
-    <input type="email" name="email1" id="email1">
-    <label style="color: red;" id="EmailMsg1"></label>
-    <p>Password:</p>
-    <input type="password" name="password" id="password">
-    <label style="color: red;" id="passwordMsg"></label>-->
-  <!--  <p>Repeat Password:</p>
-    <input type="password" name="password1" id="password1">
-    <label style="color: red;" id="passwordMsg1"></label>
-    <p>Birthday</p>
-    <input type="date" name="birthday" id="birthday">
-    <label style="color: red;" id="birthdayMsg"></label>
-    <p>Phone Number</p>
-    <input type="tel" name="tel" id="tel">
-    <label style="color: red;" id="telMsg"></label>
-    <br>
-    <input type="submit" names="registerBtn" value="Register" id="button1">
-</div>
-</div>
-</form>-->
 
 <?php
 
@@ -88,7 +52,7 @@
 
 ?>
 <script class="script">
- /*  var button = document.getElementById("button1");
+  var button = document.getElementById("button1");
 
    var nameMsg = document.getElementById("nameMsg");
 
@@ -230,18 +194,17 @@
                 }
             }
             
-          if(birthday == "" || birthday == null){
+        / if(birthday == "" || birthday == null){
                 birthdayMsg.innerText="Fill birthday field!";
                 event.preventDefault();
             }else{
-                birthdayMsg.innerText="Birthday was not written !";
-                    event.preventDefault();
+                return true;
                }
             
             
 
         })
-          */
+          
   
             </script>
 
