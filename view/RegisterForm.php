@@ -8,7 +8,43 @@
 </head>
 <body>
     
-<form action="<?php echo $_SERVER['PHP_SELF'] ?>" class="form" >
+
+<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" class="form">
+<div class="form2">
+    <div class="form1">
+         <p>Name:</p>
+        <input type="text" name="name" placeholder="name..." id="name">
+        <label style="color: red;" id="nameMsg"></label>
+        <p>Surname:</p>
+        <input type="text" name="surname" placeholder="surname..." id="surname">
+        <label style="color: red;" id="surnameMsg"></label>
+        <p>Username:</p>
+        <input type="text" name="username" placeholder="username..." id="username">
+        <label style="color: red;" id="usernameMsg"></label>
+        <p>Email:</p>
+        <input type="text" name="email" placeholder="email..." id="email">
+        <label style="color: red;" id="EmailMsg"></label>
+        <p>Repeat Email:</p>
+        <input type="email" name="email1" id="email1">
+        <label style="color: red;" id="EmailMsg1"></label>
+        <p>Password:</p>
+        <input type="text" name="password" placeholder="password..." id="password">
+        <label style="color: red;" id="passwordMsg"></label>
+        <p>Repeat Password:</p>
+    <input type="password" name="password1" id="password1">
+    <label style="color: red;" id="passwordMsg1"></label>
+        <p>Birthday</p>
+        <input type="date" name="birthday" id="birthday">
+         <label style="color: red;" id="birthdayMsg"></label>
+        <p>Phone Number</p>
+        <input type="tel" name="tel" id="tel">
+        <label style="color: red;" id="telMsg"></label>
+<br>
+        <input type="submit" name="registerBtn" value="register" id="button1"><br><br>
+        </div>
+</div>
+    </form>
+<!--<form action="" method="post" class="form" >
     <div class="form2">
     <div class="form1">
         <p>RegisterForm</p>
@@ -23,13 +59,13 @@
     <label style="color: red;" id="usernameMsg"></label>
     <p>Email:</p>
     <input type="email" name="email" id="email">
-    <label style="color: red;" id="EmailMsg"></label>
+    <label style="color: red;" id="EmailMsg"></label>-->
  <!--   <p>Repeat Email:</p>
     <input type="email" name="email1" id="email1">
-    <label style="color: red;" id="EmailMsg1"></label>-->
+    <label style="color: red;" id="EmailMsg1"></label>
     <p>Password:</p>
     <input type="password" name="password" id="password">
-    <label style="color: red;" id="passwordMsg"></label>
+    <label style="color: red;" id="passwordMsg"></label>-->
   <!--  <p>Repeat Password:</p>
     <input type="password" name="password1" id="password1">
     <label style="color: red;" id="passwordMsg1"></label>
@@ -38,16 +74,17 @@
     <label style="color: red;" id="birthdayMsg"></label>
     <p>Phone Number</p>
     <input type="tel" name="tel" id="tel">
-    <label style="color: red;" id="telMsg"></label>-->
+    <label style="color: red;" id="telMsg"></label>
     <br>
-    <input type="submit" names="registerBtn" value="Sign Up" id="button1">
+    <input type="submit" names="registerBtn" value="Register" id="button1">
 </div>
 </div>
-</form>
+</form>-->
 
 <?php
 
   include_once '../controller/registerController.php';
+ 
 
 ?>
 <script class="script">

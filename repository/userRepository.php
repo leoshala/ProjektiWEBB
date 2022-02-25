@@ -1,44 +1,36 @@
-<?php
-include_once '../Database/databaseConnection.php';
+<?php 
+include_once '../database/databaseConnection.php';
 
-    class UserRepository{
-        private $connection;
+class UserRepository{
+    private $connection;
 
-        function __construct(){
-            $conn = new DatabaseConnection;
-            $this->connection = $conn->startConnection();
-        }
-
-
-                   // $user
-        function insertUser($user){
-
-            $conn = $this->connection;
-
-            $id = $user->getId();
-            $name = $user->getName();
-            $surname =$user->getSurname();
-            $username = $user->getUsername();
-            $email = $user->getEmail();
-            $password = $user->getPassword();
-          //  $birthday = $user->getBirthday();
-           // $tel = $user->getTel();
-
-
-            $sql = "INSERT INTO user (id,name,surname,username,email,password/*birthday,tel*/) VALUES (?,?,?,?,?,?)";
-        
-            $statement = $conn->prepare($sql);
-
-        $statement->execute($id,$name,$surname,$username,$email,$password/*$birthday,$tel]*/);
-
-    // $statement->execute(['123','leo','shala','leoshala','leon@hasf.com','leo1234','2000/05/05','04912412']);
-        
-            echo "<script> alert('User u shtua me sukses');</script>";
-        }
+    function __construct(){
+        $conn = new DatabaseConnection;
+        $this->connection = $conn->startConnection();
     }
 
-   // $userRepo = new UserRepository();
 
-   // $userRepo->insertUser();
+    function insertUser($user){
+
+        $conn = $this->connection;
+
+        $id = $user->getId();
+        $name = $user->getName();
+        $surname = $user->getSurname();
+        $email = $user->getEmail();
+        $username = $user->getUsername();
+        $password = $user->getPassword();
+
+        $sql = "INSERT INTO user (id,name,surname,email,username,password) VALUES (?,?,?,?,?,?)";
+
+        $statement = $conn->prepare($sql);
+
+        $statement->execute([$id,$name,$surname,$email,$username,$password]);
+
+        echo "<script> alert('User has been inserted successfuly!'); </script>";
+
+    }
+
+}
 
 ?>
