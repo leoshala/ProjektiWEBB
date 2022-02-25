@@ -10,7 +10,7 @@
       //  private $birthday;
        // private $tel;
 
-        function __construct($id,$name,$surname,$username,$email,$password,/*$birthday,$tel*/){
+        function __construct($id,$name,$surname,$username,$email,$password/*$birthday,$tel*/){
             $this->id = $id;
             $this->name = $name;
             $this->surname = $surname;
