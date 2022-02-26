@@ -90,6 +90,9 @@ font-family: "Times New Roman";
       height: 100%;
      
     }
+    .phpusername{
+      color: white;
+    }
     .get{
       color: rgb(231, 224, 224);
       align-items: center;

@@ -1,3 +1,4 @@
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,14 +17,15 @@
    </div>
            <div id="headD">
         <ul>
-            <li><a href="../LoginForma/About.php">About Us</a></li>
+            <li><a href="About.php">About Us</a></li>
             <li><a href="#">Search</a></li>
             <li><a href="#">Cart</a></li>
         </ul>
         </div>
         <div class="signin">
         <ul>
-            <li><a href="LogIn.php">Sing in</a></li>
+            <li><a href="LogIn.php" class="">Sing in</a></li>
+            
         </ul>
     </div>
         
