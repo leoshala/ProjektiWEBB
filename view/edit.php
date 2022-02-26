@@ -1,3 +1,16 @@
+<?php
+
+include_once '../repository/userRepository.php';
+
+$userId = $_GET['id'];
+
+$userRepository = new UserRepository();
+
+$user = $userRepository->getUserById($userId);
+
+?>
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,46 +22,53 @@
 <body>
     
 
-<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" class="form">
+<form action="" method="post" class="form">
 <div class="form2">
     <div class="form1">
+         <p>Id:</p>
+        <input type="text" name="id..." value="<?= $user['Id'] ?>" id="" readonly> 
          <p>Name:</p>
-        <input type="text" name="name" placeholder="name..." id="name">
+        <input type="text" name="name" value="<?= $user['Name'] ?>" id="name">
         <label style="color: red;" id="nameMsg"></label>
         <p>Surname:</p>
-        <input type="text" name="surname" placeholder="surname..." id="surname">
+        <input type="text" name="surname" value="<?= $user['Surname'] ?>" id="surname">
         <label style="color: red;" id="surnameMsg"></label>
         <p>Username:</p>
-        <input type="text" name="username" placeholder="username..." id="username">
+        <input type="text" name="username" value="<?= $user['Username'] ?>" id="username">
         <label style="color: red;" id="usernameMsg"></label>
         <p>Email:</p>
-        <input type="text" name="email" placeholder="email..." id="email">
+        <input type="text" name="email" value="<?= $user['Email'] ?>" id="email">
         <label style="color: red;" id="EmailMsg"></label>
-        <p>Repeat Email:</p>
-        <input type="email" name="email1" id="email1">
-        <label style="color: red;" id="EmailMsg1"></label>
         <p>Password:</p>
-        <input type="text" name="password" placeholder="password..." id="password">
+        <input type="text" name="password" value="<?= $user['password'] ?>" id="password">
         <label style="color: red;" id="passwordMsg"></label>
-        <p>Repeat Password:</p>
-    <input type="password" name="password1" id="password1">
-    <label style="color: red;" id="passwordMsg1"></label>
         <p>Birthday</p>
-        <input type="date" name="birthday" id="birthday">
+        <input type="date" name="birthday" value="<?= $user['Birthday'] ?>" id="birthday">
          <label style="color: red;" id="birthdayMsg"></label>
         <p>Phone Number</p>
-        <input type="tel" name="tel" id="tel">
+        <input type="tel" name="tel" value="<?= $user['Tel'] ?>" id="tel">
         <label style="color: red;" id="telMsg"></label>
 <br>
-        <input type="submit" name="registerBtn" value="register" id="button1"><br><br>
+        <input type="submit" name="saveBtn" value="Save" id="button1"><br><br>
         </div>
 </div>
     </form>
 
 <?php
+if(isset($_POST['saveBtn'])){
+ $id = $user['Id'];
+ $name = $_POST['name'];
+ $surname = $_POST['surname'];
+ $username = $_POST['username'];
+ $email = $_POST['email'];
+ $password = $_POST['password'];
+ $birthday = $_POST['birthday'];
+ $tel = $_POST['tel'];
 
-  include_once '../controller/registerController.php';
- 
+ $userRepository->updateUser($id,$name,$surname,$username,$email,$password,$birthday,$tel);
+// header("location:dashboard.php");
+}
+
 
 ?>
 <script class="script">
