@@ -4,12 +4,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="coinnewss.css">
 </head>
 <body>
     
 <h1>Coin News</h1>
 
-<table border="1">
+<table class="table" border="1">
         <tr>
             <th>Id</th>
             <th>Name</th>
@@ -17,6 +18,8 @@
             <th>MarketCap</th>
             <th>Volume</th>
             <th>Total Supply</th>
+            <th>Edit</th>
+            <th>Delete</th>
         </tr>
 
         <?php
@@ -48,12 +51,12 @@
 
      ?>
 
-<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+<!--<form method="post" action=" /*echo $_SERVER['PHP_SELF'];*/">
   Name: <input type="text" name="fname">
   <input type="submit">
 </form>
 
-<?php
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // collect value of input field
@@ -65,9 +68,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
   }
 
+*/
 
-?>
-
+-->
 
 
 
