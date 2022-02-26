@@ -39,7 +39,7 @@
         <p>Phone Number</p>
         <input type="tel" name="tel" id="tel">
         <label style="color: red;" id="telMsg"></label>
-<br>
+<br><br>
         <input type="submit" name="registerBtn" value="register" id="button1"><br><br>
         </div>
 </div>
