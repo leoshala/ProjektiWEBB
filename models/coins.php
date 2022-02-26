@@ -4,17 +4,17 @@ class Coins{
     private $id;
     private $name;
     private $price;
-    private $marcetcap;
+    private $marketcap;
     private $volume;
     private $totalsupply;
 
 
 
-    function __construct($id,$name,$price,$marcetcap,$volume,$totalsupply){
+    function __construct($id,$name,$price,$marketcap,$volume,$totalsupply){
             $this->id = $id;
             $this->name = $name;
-            $this->price = $price;,
-            $this->marcetcap = $marcetcap;
+            $this->price = $price;
+            $this->marketcap = $marketcap;
             $this->volume = $volume;
             $this->totalsupply = $totalsupply;
        
@@ -31,7 +31,7 @@ class Coins{
         return $this->price;
     }
     function getMarcetCap(){
-        return $this->marcetcap;
+        return $this->marketcap;
     }
     function getVolume(){
         return $this->volume;

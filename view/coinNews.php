@@ -40,13 +40,36 @@
              <td>$coin[Volume]</td>
              <td>$coin[TotalSupply]</td>
    
-             <td><a href='edit.php?id=$coin[Id]'>Edit</a></td>
+             <td><a href='editcoin.php?id=$coin[Id]'>Edit</a></td>
              <td><a href='delete.php?id=$coin[Id]'>Delete</a></td>
          </tr>
          ";
      }
 
      ?>
+
+<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+  Name: <input type="text" name="fname">
+  <input type="submit">
+</form>
+
+<?php
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // collect value of input field
+    $name = $_POST['fname'];
+    if (empty($name)) {
+      echo "Name is empty";
+    } else {
+      echo $name;
+    }
+  }
+
+
+?>
+
+
+
 
 </table>
 

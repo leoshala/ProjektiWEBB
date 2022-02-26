@@ -14,22 +14,29 @@ class CoinsRepository{
 
         $conn = $this->connection;
 
-        $id = $user->getId();
-        $name = $user->getName();
-        $marcetcap = $user->getMarcetCap();
-        $volume = $user->getVolume();
-        $totalsupply = $user->getTotalSupply();   
+        $id = $coins->getId();
+        $name = $coins->getName();
+        $price = $coins->getPrice();
+        $marketcap = $coins->getMarcetCap();
+        $volume = $coins->getVolume();
+        $totalsupply = $coins->getTotalSupply();   
  
 
-        $sql = "INSERT INTO coins (id,name,marcetcap,volume,totalsupply) VALUES (?,?,?,?,?)";
+        $sql = "INSERT INTO coins (id,name,price,marketcap,volume,totalsupply) VALUES (?,?,?,?,?,?)";
 
         $statement = $conn->prepare($sql);
 
-        $statement->execute([$id,$name,$marcetcap,$volume,$totalsupply]);
+        $statement->execute([$id,$name,$price,$marketcap,$volume,$totalsupply]);
+
+       // $statement->execute(['33','btc','21354','23512','346154','34165134']);
 
         echo "<script> alert('coin has been inserted successfuly!'); </script>";
 
     }
+
+//$coinsrepo = new CoinsRepository;
+
+//$coinsrepo->insertCoins();
 
     function getAllCoins(){
         $conn = $this->connection;
@@ -53,22 +60,22 @@ class CoinsRepository{
         return $coin;
     }
 
-    function updateUser($id,$name,$marcetcap,$volume,$totalsupply){
+    function updateCoin($id,$name,$price,$marketcap,$volume,$totalsupply){
 
             $conn = $this->connection;
 
-            $sql = "UPDATE coins SET name=?, marcetcap=?,volume=?,totalsupply=? WHERE id=?";
+            $sql = "UPDATE coins SET name=?,price=?, marketcap=?,volume=?,totalsupply=? WHERE id=?";
 
             $statement = $conn->prepare($sql);
 
-            $statement->execute([$name,$marcetcap,$volume,$totalsupply,$id]);
+            $statement->execute([$name,$price,$marketcap,$volume,$totalsupply,$id]);
     
             echo "<script>alert('update was successful');</script>";
     
         }
         
 
-        function deleteUser($id){
+        function deleteCoin($id){
             $conn = $this->connection;
     
             $sql = "DELETE FROM coins WHERE id=?";
@@ -81,5 +88,6 @@ class CoinsRepository{
        } 
 
 }
+
 
 ?>
