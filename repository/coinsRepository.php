@@ -1,7 +1,7 @@
 <?php 
 include_once '../database/databaseConnection.php';
 
-class UserRepository{
+class CoinsRepository{
     private $connection;
 
     function __construct(){

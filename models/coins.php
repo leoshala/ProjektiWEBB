@@ -3,15 +3,17 @@
 class Coins{
     private $id;
     private $name;
+    private $price;
     private $marcetcap;
     private $volume;
     private $totalsupply;
 
 
 
-    function __construct($id,$name,$marcetcap,$volume,$totalsupply){
+    function __construct($id,$name,$price,$marcetcap,$volume,$totalsupply){
             $this->id = $id;
             $this->name = $name;
+            $this->price = $price;,
             $this->marcetcap = $marcetcap;
             $this->volume = $volume;
             $this->totalsupply = $totalsupply;
@@ -24,6 +26,9 @@ class Coins{
     }
     function getName(){
         return $this->name;
+    }
+    function getPrice(){
+        return $this->price;
     }
     function getMarcetCap(){
         return $this->marcetcap;

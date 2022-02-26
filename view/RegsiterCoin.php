@@ -12,6 +12,9 @@
          <p>Name:</p>
         <input type="text" name="name" placeholder="name..." id="name">
         <label style="color: red;" id="nameMsg"></label>
+        <p>Price:</p>
+        <input type="text" name="price" placeholder="price..." id="surname">
+        <label style="color: red;" id="surnameMsg"></label>
         <p>MarcetCap:</p>
         <input type="text" name="marketcap" placeholder="marketcap..." id="surname">
         <label style="color: red;" id="surnameMsg"></label>

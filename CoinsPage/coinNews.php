@@ -19,5 +19,36 @@
             <th>Total Supply</th>
         </tr>
 
+        <?php
+
+// include_once '../LoginForma/loginValidate.php';
+
+     include_once '../repository/coinsRepository.php';
+
+     $coinsRepository = new CoinsRepository();
+
+     $coins = $coinsRepository->getAllCoins();
+
+     foreach($coins as $coin){
+         echo
+         "
+         <tr>
+             <td>$coin[Id]</td>
+             <td>$coin[Name]</td>
+             <td>$coin[Price]</td>
+             <td>$coin[MarketCap]</td>
+             <td>$coin[Volume]</td>
+             <td>$coin[TotalSupply]</td>
+   
+             <td><a href='edit.php?id=$coin[Id]'>Edit</a></td>
+             <td><a href='delete.php?id=$coin[Id]'>Delete</a></td>
+         </tr>
+         ";
+     }
+
+     ?>
+
+</table>
+
 </body>
 </html>
