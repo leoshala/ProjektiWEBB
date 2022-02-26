@@ -120,9 +120,9 @@ h1 {
   color: rgb(231, 224, 224);
   background-image: linear-gradient(281deg, #546085, #4d04a0);
   border-radius: 25px;
-  width: 40%;
+  width: 15%;
   text-align: center;
-  margin-left: 30%;
+  margin-left: 45%;
   
 }
 .aget {
@@ -131,3 +131,5 @@ h1 {
 a {
   text-decoration: none;
 }
+
+
