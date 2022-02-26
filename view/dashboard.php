@@ -2,10 +2,10 @@
 session_start();
 
 if(!isset($_SESSION['email'])){
-    header("location:LogIn.php");
+    header("location: LoginForma/LogIn.php");
 }else{
     if($_SESSION['role'] != "admin"){
-        header("location:About.php");
+        header("location: LoginForma/About.php");
     }
 
 
@@ -31,11 +31,13 @@ if(!isset($_SESSION['email'])){
             <th>PASSWORD</th>
             <th>BIRTHDAY</th>
             <TH>TEL</TH>
+            <th>EDIT</th>
+            <th>DELETE</th>
         </tr>
 
         <?php
 
-    
+   // include_once '../LoginForma/loginValidate.php';
 
         include_once '../repository/userRepository.php';
 

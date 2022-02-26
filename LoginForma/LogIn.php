@@ -37,6 +37,7 @@ header('location:About.php');
                   <span> <a href="#">Forgot Password</a></span>
                 </div>
                 </div>
+                <br>
                 <div class="orwith">
                     <p><b> - Or Sign in With -</b> </p>
                 </div>
@@ -44,10 +45,13 @@ header('location:About.php');
                     <div class="social2"><a class="a" href="#">Facebook</a></div>
                    <div class="social2"> <a class="a" href="#">Google</a></div>
                 </div>
-                <div><p class="dont">Dont have an account?</p>
-                <a href="RegisterForm.html">Sign Up</a></div>
+                <div><br><a class="dont" href="../view/RegisterForm.php">Dont have an account?</a>
+                <a href="../view/RegisterForm.php">Sign Up</a></div>
             </form>
 <?php
+
+     //   require_once '../view/dashboard.php';
+
      require_once 'loginValidate.php';
      
 ?>

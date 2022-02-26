@@ -11,6 +11,8 @@ if(isset($_POST['loginBtn'])){
 
         include_once 'users.php';
 
+      //  include_once '../view/dashboard.php';
+
         foreach($users as $user){
             $i=0;
             if($email == $user['email'] && $password == $user['password']){

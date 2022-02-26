@@ -25,7 +25,7 @@ if(!isset($_SESSION['email'])){
     <div id="header">
         <div id="headM">
        <ul>
-         <li>  <a href="../HtmlCssFiles/index.html">OLEKS</a></li>
+         <li>  <a href="index.php">OLEKS</a></li>
        </ul>
    </div>
            <div id="headD">
@@ -34,7 +34,7 @@ if(!isset($_SESSION['email'])){
             <li><a href="#">Search</a></li>
             <li><a href="#">Cart</a></li>
             <li> <a href="logout.php">Log out</a></li> 
-             <li><a href="dashboard.php" class="<?php echo $hide ?>">Dashboard</a></li> 
+             <li><a href="../view/dashboard.php" class="<?php echo $hide ?>">Dashboard</a></li> 
         </ul>
         </div>
         <div class="signin">

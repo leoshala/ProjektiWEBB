@@ -66,7 +66,7 @@ if(isset($_POST['saveBtn'])){
  $tel = $_POST['tel'];
 
  $userRepository->updateUser($id,$name,$surname,$username,$email,$password,$birthday,$tel);
-// header("location:dashboard.php");
+ header("location:dashboard.php");
 }
 
 
