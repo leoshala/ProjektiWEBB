@@ -46,8 +46,21 @@ if(!isset($_SESSION['email'])){
       </header>
     </div>
 
-    <div class="rcn container">
-      <img src="../img/Cryptofoto.jpeg" class="foto" />
+    <div class="shibat">
+
+
+<div class="mySlides fade">
+  <img src="../img/shibu1.png" class="shibut">
+</div>
+
+<div class="mySlides fade">
+  <img src="../img/shibu2.jpg"  class="shibut">
+</div>
+
+<div class="mySlides fade">
+  <img src="../img/shibu3.jpeg"  class="shibut">
+</div>
+<br>
     </div>
 
     <div class="n1 container">
@@ -64,6 +77,30 @@ if(!isset($_SESSION['email'])){
             >
           </h4>
         </div>
+
+        <script>
+var slideIndex = 0;
+showSlides();
+//foto
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+
+  slides[slideIndex-1].style.display = "block";  
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+
+
+
+
         <div class="news">
           <a href=""><img class="news-img" src="../img/censored.jpeg" /></a>
           <h4 class="news-title">

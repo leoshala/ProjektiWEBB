@@ -42,6 +42,7 @@ if(!empty($msg)){
         $db = mysqli_connect("localhost","root","","OLEKS");
         $sql = "SELECT * FROM images";
         $result = mysqli_query($db,$sql);
+ 
         while($row = mysqli_fetch_array($result)){
             echo "<div id='img_div'>";
             echo "<img src='img/".$row['img']."' >";

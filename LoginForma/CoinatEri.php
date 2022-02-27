@@ -1,15 +1,18 @@
 <?php
+$hide="";
 session_start();
-
 if(!isset($_SESSION['email'])){
-    header("location: LoginForma/LogIn.php");
+    header("location:LogIn.php");
 }else{
-    if($_SESSION['role'] != "admin"){
-        header("location: LoginForma/About.php");
+    if($_SESSION['role'] == "admin" ){
+        $hide = "";
+    }else{
+        $hide = "hide";
     }
 
 
 ?>
+
 
 
 
