@@ -7,11 +7,16 @@ if(isset($_POST['loginBtn'])){
         $email = $_POST['email'];
         $password = $_POST['password'];
 
-    
+
+
+
 
        include_once 'users.php';
-    // include_once '../repository/userRepository.php';
+  //   include_once '../repository/userRepository.php';
       //  include_once '../view/dashboard.php';
+
+    
+        //$users=array();
 
      // $userRepository = new UserRepository();
 
@@ -20,6 +25,8 @@ if(isset($_POST['loginBtn'])){
     //$email = $_POST['email'];
     //  $password = $_POST['password'];
     //  $userrole = $_POST['userrole'];
+
+
 
        foreach($users as $user){
             $i=0;
@@ -31,7 +38,7 @@ if(isset($_POST['loginBtn'])){
                 session_start();
                  $_SESSION['email'] = $email;
                  $_SESSION['password'] = $password;
-                 $_SESSION['role'] = $user['role'];
+                 $_SESSION['userrole'] = $user['userrole'];
                  $_SESSION['username'] = $user['username'];
 
                  header("location:About.php");

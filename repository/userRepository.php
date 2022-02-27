@@ -45,6 +45,21 @@ class UserRepository{
         return $users;
     }
 
+    function getUsersRole($email,$password){
+
+        $conn = $this->connection;
+
+        $sql = "SELECT * FROM user WHERE email='$email' AND password='$password'";
+
+        $statement = $conn->query($sql);
+
+        $users = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+        return $users;
+
+
+    }
+
     function getUserById($id){
         $conn = $this->connection;
 
