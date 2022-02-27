@@ -20,5 +20,7 @@
 
     $users = [$user1,$user2];
 
-
+// qysh mi marr user dhe adminat prej data bazes e jo pre ktij fajlli 
+//prej ktij fajlli po funksionono po prej databazes jo
+//te fajlli loginValidate.php pom vyn ni array per me kqyr user
 ?>

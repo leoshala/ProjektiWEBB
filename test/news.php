@@ -38,6 +38,19 @@ if(!empty($msg)){
 <body>
 
 <div id="content">
+    <?php
+        $db = mysqli_connect("localhost","root","","OLEKS");
+        $sql = "SELECT * FROM images";
+        $result = mysqli_query($db,$sql);
+        while($row = mysqli_fetch_array($result)){
+            echo "<div> id='img_div'>";
+            echo "<img src='img/".$row['image']."'>";
+            echo "<p>".$row['text']."</p>";
+            echo "</div>";
+        }
+
+
+?>
 <form action="news.php" method="post" enctype="multipart/form-data">
 <input type="hidden" name="size" value="1000000">
 <div>

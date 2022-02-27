@@ -10,14 +10,14 @@ if(isset($_POST['loginBtn'])){
     
 
        include_once 'users.php';
-     //include_once '../repository/userRepository.php';
+    // include_once '../repository/userRepository.php';
       //  include_once '../view/dashboard.php';
 
-    //  $userRepository = new UserRepository();
+     // $userRepository = new UserRepository();
 
-    //  $users = $userRepository->getAllUsers();
+     // $users = $userRepository->getAllUsers();
 
-     // $email = $_POST['email'];
+    //$email = $_POST['email'];
     //  $password = $_POST['password'];
     //  $userrole = $_POST['userrole'];
 
