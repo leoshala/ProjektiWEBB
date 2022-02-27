@@ -1,3 +1,18 @@
+<?php
+session_start();
+
+if(!isset($_SESSION['email'])){
+    header("location: LoginForma/LogIn.php");
+}else{
+    if($_SESSION['role'] != "admin"){
+        header("location: LoginForma/About.php");
+    }
+
+
+?>
+
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,6 +24,7 @@
 <body>
     
 <h1>Coin News</h1>
+
 
 <table class="table">
         <thead>
@@ -82,3 +98,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 </body>
 </html>
+<?php
+}
+?>

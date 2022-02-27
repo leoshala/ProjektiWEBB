@@ -18,8 +18,9 @@
            <div id="headD">
         <ul>
             <li><a href="About.php">About Us</a></li>
-            <li><a href="#">Search</a></li>
-            <li><a href="#">Cart</a></li>
+            <li><a href="News.php">News</a></li>
+            <li><a href="CoinatEri.php">Coin News</a></li>
+
         </ul>
         </div>
         <div class="signin">

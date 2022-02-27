@@ -31,8 +31,8 @@ if(!isset($_SESSION['email'])){
            <div id="headD">
         <ul>
             <li><a href="About.php">About Us</a></li>
-            <li><a href="#">Search</a></li>
-            <li><a href="#">Cart</a></li>
+            <li><a href="News.php">News</a></li>
+            <li><a href="CoinatEri.php">Coin News</a></li>
             <li> <a href="logout.php">Log out</a></li> 
              <li><a href="../view/dashboard.php" class="<?php echo $hide ?>">Dashboard</a></li> 
         </ul>
@@ -186,7 +186,7 @@ if(!isset($_SESSION['email'])){
           <h2>Subscribe to OLEKS</h2>
           <p>Sign up to receive our newsletter with updates about your wallet.</p>
           <div class="signfooter">
-              <a class="signfooter1" href="RegisterForm.html">SIGN ME UP!</a>
+              <a class="signfooter1" href="#">Subscribe!</a>
           </div>
       </div>
     </div>

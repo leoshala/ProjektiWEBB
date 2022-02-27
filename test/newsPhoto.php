@@ -42,15 +42,17 @@ if(!empty($msg)){
         $db = mysqli_connect("localhost","root","","OLEKS");
         $sql = "SELECT * FROM images";
         $result = mysqli_query($db,$sql);
-        while($row = mysqli_fetch_array($result)) {
+ 
+        while($row = mysqli_fetch_array($result)){
             echo "<div id='img_div'>";
-            echo "<img src='img/".$row['img']."'>";
+            echo "<img src='img/".$row['img']."' >";
             echo "<p>".$row['description']."</p>";
             echo "</div>";
         }
 
 
 ?>
+
 <form action="news.php" method="post" enctype="multipart/form-data">
 <input type="hidden" name="size" value="1000000">
 <div>

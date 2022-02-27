@@ -1,3 +1,19 @@
+<?php
+$hide="";
+session_start();
+if(!isset($_SESSION['email'])){
+    header("location:LogIn.php");
+}else{
+    if($_SESSION['role'] == "admin" ){
+        $hide = "";
+    }else{
+        $hide = "hide";
+    }
+
+
+?>
+
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -16,15 +32,15 @@
           <div class="logo-div">
             <img src="../img/logo.png.png" class="logoo" />
           </div>
-          <div class="login"><a href="LogIn.php">LOG IN</a></div>
         </div>
         <div class="menu">
           <ul>
-            <li><a href="#">HOME</a></li>
+            <li><a href="index.php">HOME</a></li>
             <li><a href="#">NEWS</a></li>
-            <li><a href="#">COINS</a></li>
-            <li><a href="#">LEARN</a></li>
-            <li><a href="#">VIDEOS</a></li>
+            <li><a href="About.php">About</a></li>
+            <li><a href="CoinatEri.php">Coins News</a></li>
+            <li> <a href="logout.php">Log out</a></li> 
+             <li><a href="../view/dashboard.php" class="<?php echo $hide ?>">Dashboard</a></li> 
           </ul>
         </div>
       </header>
@@ -72,9 +88,7 @@
           </h4>
         </div>
         <div class="news">
-          <a href=""
-            ><img class="news-img" src="../img/welcometocrypto.jpeg"
-          /></a>
+          <a href=""><img class="news-img" src="../img/sun.jpeg" /></a>
           <h4 class="news-title">
             <a href="">US legislators move to support crypto (sorry Canada)</a>
           </h4>
@@ -217,7 +231,7 @@
             Sign up to receive our newsletter with updates about your wallet.
           </p>
           <div class="signfooter">
-            <a class="signfooter1" href="RegisterForm.html">SIGN ME UP!</a>
+            <a class="signfooter1" href="">Subscribe!</a>
           </div>
         </div>
       </div>
@@ -264,3 +278,6 @@
     </footer>
   </body>
 </html>
+<?php
+}
+?>
