@@ -44,18 +44,6 @@ class UserRepository{
 
         return $users;
     }
-    function getRole($email,$password,$userrole){
-
-        $conn = $this->connection;
-
-        $sql ="SELECT * FROM user WHERE email='".$email."' AND password='".$password."' AND userrole='".$userrole."'";
-
-        $statement = $conn->query($sql);
-
-        $users = $statement->fetchAll();
-
-        return $users;
-    }
 
     function getUserById($id){
         $conn = $this->connection;
