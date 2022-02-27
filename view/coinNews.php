@@ -10,18 +10,21 @@
     
 <h1>Coin News</h1>
 
-<table class="table" border="1">
+<table class="table">
+        <thead>
         <tr>
             <th>Id</th>
             <th>Name</th>
-            <TH>Price</TH>
+            <th>Price</th>
             <th>MarketCap</th>
             <th>Volume</th>
             <th>Total Supply</th>
             <th>Edit</th>
             <th>Delete</th>
         </tr>
+    </thead>
 
+        <tbody>
         <?php
 
 // include_once '../LoginForma/loginValidate.php';
@@ -44,12 +47,13 @@
              <td>$coin[TotalSupply]</td>
    
              <td><a href='editcoin.php?id=$coin[Id]'>Edit</a></td>
-             <td><a href='deletecoin.php?id=$coin[Id]'>Delete</a></td>
+             <td><a href='delete.php?id=$coin[Id]'>Delete</a></td>
          </tr>
          ";
      }
 
      ?>
+        </tbody>
 
 <!--<form method="post" action=" /*echo $_SERVER['PHP_SELF'];*/">
   Name: <input type="text" name="fname">

@@ -17,12 +17,14 @@ if(!isset($_SESSION['email'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <link rel="stylesheet" href="dashboard.css">
+
 </head>
 <body>
     <h1>Dashboard</h1>
 
-    <table border="1">
+    <table class="table">
         <tr>
             <th>ID</th>
             <th>NAME</th>
