@@ -48,6 +48,9 @@ $user = $userRepository->getUserById($userId);
         <p>Phone Number</p>
         <input type="tel" name="tel" value="<?= $user['Tel'] ?>" id="tel">
         <label style="color: red;" id="telMsg"></label>
+        <p>UserRole:</p>
+        <input type="text" name="userrole" value="<?= $user['UserRole'] ?>" id="userrole">
+        <label style="color: red;" id="userroleMsg"></label>
 <br>
         <input type="submit" name="saveBtn" value="Save" id="button1"><br><br>
         </div>
@@ -64,8 +67,9 @@ if(isset($_POST['saveBtn'])){
  $password = $_POST['password'];
  $birthday = $_POST['birthday'];
  $tel = $_POST['tel'];
+ $userrole = $_POST['userrole'];
 
- $userRepository->updateUser($id,$name,$surname,$username,$email,$password,$birthday,$tel);
+ $userRepository->updateUser($id,$name,$surname,$username,$email,$password,$birthday,$tel,$userrole);
  header("location:dashboard.php");
 }
 

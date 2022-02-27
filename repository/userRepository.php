@@ -22,12 +22,13 @@ class UserRepository{
         $password = $user->getPassword();
         $birthday = $user->getBirthday();
         $tel = $user->getTel();
+        $userrole = $user->getUserRole();
 
-        $sql = "INSERT INTO user (id,name,surname,username,email,password,birthday,tel) VALUES (?,?,?,?,?,?,?,?)";
+        $sql = "INSERT INTO user (id,name,surname,username,email,password,birthday,tel,userrole) VALUES (?,?,?,?,?,?,?,?,?)";
 
         $statement = $conn->prepare($sql);
 
-        $statement->execute([$id,$name,$surname,$username,$email,$password,$birthday,$tel]);
+        $statement->execute([$id,$name,$surname,$username,$email,$password,$birthday,$tel,$userrole]);
 
         echo "<script> alert('User has been inserted successfuly!'); </script>";
 
@@ -39,6 +40,18 @@ class UserRepository{
         $sql = "SELECT * FROM user";
 
         $statement = $conn->query($sql);
+        $users = $statement->fetchAll();
+
+        return $users;
+    }
+    function getRole($email,$password,$userrole){
+
+        $conn = $this->connection;
+
+        $sql ="SELECT * FROM user WHERE email='".$email."' AND password='".$password."' AND userrole='".$userrole."'";
+
+        $statement = $conn->query($sql);
+
         $users = $statement->fetchAll();
 
         return $users;
@@ -55,15 +68,15 @@ class UserRepository{
         return $user;
     }
 
-    function updateUser($id,$name,$surname,$username,$email,$password,$birthday,$tel){
+    function updateUser($id,$name,$surname,$username,$email,$password,$birthday,$tel,$userrole){
 
             $conn = $this->connection;
 
-            $sql = "UPDATE user SET name=?, surname=?,username=?,email=?,password=?,birthday=?,tel=? WHERE id=?";
+            $sql = "UPDATE user SET name=?, surname=?,username=?,email=?,password=?,birthday=?,tel=?,userrole=? WHERE id=?";
 
             $statement = $conn->prepare($sql);
 
-            $statement->execute([$name,$surname,$username,$email,$password,$birthday,$tel,$id]);
+            $statement->execute([$name,$surname,$username,$email,$password,$birthday,$tel,$userrole,$id]);
     
             echo "<script>alert('update was successful');</script>";
     

@@ -17,6 +17,7 @@ if(!isset($_SESSION['email'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
     <h1>Dashboard</h1>
@@ -31,6 +32,7 @@ if(!isset($_SESSION['email'])){
             <th>PASSWORD</th>
             <th>BIRTHDAY</th>
             <TH>TEL</TH>
+            <th>USERROLE</th>
             <th>EDIT</th>
             <th>DELETE</th>
         </tr>
@@ -57,6 +59,7 @@ if(!isset($_SESSION['email'])){
                 <td>$user[password]</td>
                 <td>$user[Birthday]</td>
                 <td>$user[Tel]</td>
+                <td>$user[UserRole]</td>
                 <td><a href='edit.php?id=$user[Id]'>Edit</a></td>
                 <td><a href='delete.php?id=$user[Id]'>Delete</a></td>
             </tr>
