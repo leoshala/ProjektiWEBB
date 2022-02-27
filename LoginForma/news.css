@@ -27,9 +27,18 @@ body {
 }
 
 .menu {
+  position: relative;
   border-bottom: 2px solid grey;
   border-top: 2px solid grey;
   padding-bottom: 20px;
+}
+.shibat {
+  display: flex;
+  justify-content: center;
+}
+.shibut {
+  width: 700px;
+  height: 700px;
 }
 ul {
   display: flex;
