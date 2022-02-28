@@ -51,18 +51,17 @@ if(!isset($_SESSION['email'])){
    
 
   
-<div class="shibat" style="max-width:500px">
+<div class="shibat" style="max: width 1000px;" >
 
 <div class="mySlides1">
-  <img src="../img/shibu1.png" class="shibut" style="width:100%">
+  <img src="../img/shibu1.png" class="shibut" style="width:100%;">
+</div>
+<div class="mySlides1">
+  <img src="../img/shibu2.jpg"  class="shibut"  style="width: 100%;">
 </div>
 
 <div class="mySlides1">
-  <img src="../img/shibu2.jpg"  class="shibut"  style="width:100%">
-</div>
-
-<div class="mySlides1">
-  <img src="../img/shibu3.jpeg"  class="shibut"  style="width:100%">
+  <img src="../img/shibu3.jpeg"  class="shibut"  style="width:100%;">
 </div>
 </div>
 </div>
