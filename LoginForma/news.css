@@ -7,6 +7,11 @@ body {
   padding: 0;
   background-color: #1f2033;
 }
+.shibat {
+  
+  width: 100%;
+  height: 500px;
+}
 .bg {
   background: linear-gradient(281deg, #1648df, #2b015a);
   padding-bottom: 300px;
