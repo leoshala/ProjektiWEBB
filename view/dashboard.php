@@ -22,8 +22,9 @@ if(!isset($_SESSION['email'])){
 
 </head>
 <body>
-    <h1>Dashboard</h1>
-    <h2><a href="coinNews.php"> Coin News Dashboard</a></h2>
+    <h1>Dashboard</h1><div>
+ <p>  <a href="coinNews.php"> Coin News Dashboard</a></p>
+
 
     <table class="table">
         <tr>

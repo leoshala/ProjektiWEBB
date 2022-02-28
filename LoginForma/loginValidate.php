@@ -38,7 +38,7 @@ if(isset($_POST['loginBtn'])){
                 session_start();
                  $_SESSION['email'] = $email;
                  $_SESSION['password'] = $password;
-                 $_SESSION['userrole'] = $user['userrole'];
+                 $_SESSION['role'] = $user['role'];
                  $_SESSION['username'] = $user['username'];
 
                  header("location:About.php");

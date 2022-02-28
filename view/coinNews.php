@@ -63,7 +63,7 @@ if(!isset($_SESSION['email'])){
              <td>$coin[TotalSupply]</td>
    
              <td><a href='editcoin.php?id=$coin[Id]'>Edit</a></td>
-             <td><a href='delete.php?id=$coin[Id]'>Delete</a></td>
+             <td><a href='deleteCoin.php?id=$coin[Id]'>Delete</a></td>
          </tr>
          ";
      }

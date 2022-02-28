@@ -2,7 +2,7 @@
 $msg="";
 if(isset($_POST['upload'])){
 
-    $target = __DIR__ . "../img/".basename($_FILES['image']['name']);
+    $target = __DIR__ . "\..\img\\".basename($_FILES['image']['name']);
 
     $db = mysqli_connect("localhost","root","","OLEKS");
    
@@ -14,7 +14,7 @@ if(isset($_POST['upload'])){
     mysqli_query($db,$sql);
 
         if(move_uploaded_file($_FILES['image']['tmp_name'], $target)){
-            $msg = "image uploaded succesfully";
+            header("location: newsPhoto.php");
         }else{
             $msg = "there was a problem uploading image";
         }
@@ -50,10 +50,9 @@ if(!empty($msg)){
             echo "</div>";
         }
 
-
 ?>
 
-<form action="newsPhoto.php" method="post" enctype="multipart/form-data">
+<form action="#" method="post" enctype="multipart/form-data">
 <input type="hidden" name="size" value="1000000">
 <div>
     <input type="file" name="image">
@@ -62,13 +61,20 @@ if(!empty($msg)){
     <textarea name="text"  cols="40" rows="4" placeholder="asfkaskf"></textarea>
 </div>
 <div>
-    <input type="submit" name="upload" value="Upload image">
+    <input type="submit" name="upload" value="Upload image" onclick="return mess();">
 </div>
 
 </form>
 
 
 </div>
+<script type="text/javascript">
+
+    function mess(){
+        alert("Uploading image successful");
+        return true;
+    }
+</script>
     
 </body>
 </html>

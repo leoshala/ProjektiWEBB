@@ -7,7 +7,7 @@ class User{
     private $email;
     private $username;
     private $password;
-   private $birthday;
+    private $birthday;
     private $tel;
     private $userrole;
 
