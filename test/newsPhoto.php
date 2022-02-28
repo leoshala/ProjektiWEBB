@@ -2,14 +2,14 @@
 $msg="";
 if(isset($_POST['upload'])){
 
-    $target = __DIR__ . "\..\img\\".basename($_FILES['image']['name']);
+    $target = __DIR__ . "../img/".basename($_FILES['image']['name']);
 
     $db = mysqli_connect("localhost","root","","OLEKS");
    
     $image = $_FILES['image']['name'];
     $text = $_POST['text'];
 
-    $sql = "INSERT INTO images (img, description) VALUES ('/img/$image','$text')";
+    $sql = "INSERT INTO images (img, description) VALUES ('$image','$text')";
 
     mysqli_query($db,$sql);
 
