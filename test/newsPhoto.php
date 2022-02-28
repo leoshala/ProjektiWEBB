@@ -36,22 +36,7 @@ if(!empty($msg)){
      <link rel="stylesheet" type="text/css" href="stylenews.css">
 </head>
 <body>
-
-<div id="content">
-    <?php
-        $db = mysqli_connect("localhost","root","","OLEKS");
-        $sql = "SELECT * FROM images";
-        $result = mysqli_query($db,$sql);
- 
-        while($row = mysqli_fetch_array($result)){
-            echo "<div id='img_div'>";
-            echo "<img src='../img/".$row['img']."' >";
-            echo "<p>".$row['description']."</p>";
-            echo "</div>";
-        }
-
-?>
-
+    
 <form action="#" method="post" enctype="multipart/form-data">
 <input type="hidden" name="size" value="1000000">
 <div>
@@ -65,6 +50,23 @@ if(!empty($msg)){
 </div>
 
 </form>
+
+<div id="content">
+
+
+    <?php
+        $db = mysqli_connect("localhost","root","","OLEKS");
+        $sql = "SELECT * FROM images";
+        $result = mysqli_query($db,$sql);
+ 
+        while($row = mysqli_fetch_array($result)){
+            echo "<div id='img_div'>";
+            echo "<img src='../img/".$row['img']."' >";
+            echo "<p>".$row['description']."</p>";
+            echo "</div>";
+        }
+
+?>
 
 
 </div>

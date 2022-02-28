@@ -39,34 +39,38 @@ if(!isset($_SESSION['email'])){
             <li><a href="#">NEWS</a></li>
             <li><a href="About.php">About</a></li>
             <li><a href="CoinatEri.php">Coins News</a></li>
-            <li> <a href="logout.php">Log out</a></li> 
+          </ul>
+          <ul>
+          <li> <a href="logout.php">Log out</a></li> 
              <li><a href="../view/dashboard.php" class="<?php echo $hide ?>">Dashboard</a></li> 
+         
           </ul>
         </div>
       </header>
     </div>
+   
 
-    <div class="shibat">
+  
+<div class="shibat" style="max-width:500px">
 
-
-<div class="mySlides fade">
-  <img src="../img/shibu1.png" class="shibut">
+<div class="mySlides1">
+  <img src="../img/shibu1.png" class="shibut" style="width:100%">
 </div>
 
-<div class="mySlides fade">
-  <img src="../img/shibu2.jpg"  class="shibut">
+<div class="mySlides1">
+  <img src="../img/shibu2.jpg"  class="shibut"  style="width:100%">
 </div>
 
-<div class="mySlides fade">
-  <img src="../img/shibu3.jpeg"  class="shibut">
+<div class="mySlides1">
+  <img src="../img/shibu3.jpeg"  class="shibut"  style="width:100%">
 </div>
-<br>
-    </div>
-
+</div>
+</div>
     <div class="n1 container">
-      <h1>Recent Crypto News</h1>
-    </div>
+     
+  
     <div class="container">
+    <h1>Recent Crypto News</h1>
       <div class="cryptonews">
         <div class="news">
           <a href=""><img class="news-img" src="../img/foto.jpeg" /></a>
@@ -85,7 +89,7 @@ showSlides();
 
 function showSlides() {
   var i;
-  var slides = document.getElementsByClassName("mySlides");
+  var slides = document.getElementsByClassName("mySlides1");
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";  
   }
