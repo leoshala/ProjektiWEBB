@@ -45,7 +45,7 @@ if(!empty($msg)){
  
         while($row = mysqli_fetch_array($result)){
             echo "<div id='img_div'>";
-            echo "<img src='img/".$row['img']."' >";
+            echo "<img src='../img/".$row['img']."' >";
             echo "<p>".$row['description']."</p>";
             echo "</div>";
         }
@@ -53,7 +53,7 @@ if(!empty($msg)){
 
 ?>
 
-<form action="news.php" method="post" enctype="multipart/form-data">
+<form action="newsPhoto.php" method="post" enctype="multipart/form-data">
 <input type="hidden" name="size" value="1000000">
 <div>
     <input type="file" name="image">
