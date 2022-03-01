@@ -1,3 +1,17 @@
+<?php
+$hide="";
+session_start();
+if(!isset($_SESSION['email'])){
+    header("location:LogIn.php");
+}else{
+    if($_SESSION['role'] == "admin" ){
+        $hide = "";
+    }else{
+        $hide = "hide";
+    }
+
+
+?>
 
 <html lang="en">
 <head>
@@ -9,25 +23,28 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="header">
+<div id="header">
         <div id="headM">
        <ul>
-       <li><a href="index.php">OLEKS</a></li>
+         <li>  <a href="index.php">OLEKS</a></li>
        </ul>
    </div>
            <div id="headD">
         <ul>
+        <li><a href="../view/dashboard.php" class="<?php echo $hide ?>">Dashboard</a></li> 
             <li><a href="About.php">About Us</a></li>
             <li><a href="News.php">News</a></li>
             <li><a href="CoinatEri.php">Coin News</a></li>
             <li><a href="Insights.php">Insights</a></li>
-
+            <li> <a href="logout.php">Log out</a></li> 
+          
         </ul>
         </div>
         <div class="signin">
         <ul>
-            <li><a href="LogIn.php" class="">Sing in</a></li>
-            
+            <li><a href=""><?php
+    echo "UserName: ".$_SESSION['username'];
+    ?></a></li>
         </ul>
     </div>
         
@@ -322,3 +339,6 @@
    
 </body>
 </html>
+<?php
+}
+?>
