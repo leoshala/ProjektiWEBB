@@ -1,4 +1,21 @@
 <?php
+$hide="";
+session_start();
+if(!isset($_SESSION['email'])){
+    header("location:LogIn.php");
+}else{
+    if($_SESSION['role'] == "admin" ){
+        $hide = "";
+    }else{
+        $hide = "hide";
+    }
+
+
+?>
+
+
+
+<?php
 $msg="";
 if(isset($_POST['upload'])){
 
@@ -14,7 +31,7 @@ if(isset($_POST['upload'])){
     mysqli_query($db,$sql);
 
         if(move_uploaded_file($_FILES['image']['tmp_name'], $target)){
-            header("location: newsPhoto.php");
+            header("location: Insights.php");
         }else{
             $msg = "there was a problem uploading image";
         }
@@ -33,7 +50,7 @@ if(!empty($msg)){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-     <link rel="stylesheet" type="text/css" href="stylenews.css">
+     <link rel="stylesheet" type="text/css" href="../CSS-Style/Insights.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
@@ -50,33 +67,42 @@ if(!empty($msg)){
             <li><a href="About.php">About Us</a></li>
             <li><a href="News.php">News</a></li>
             <li><a href="CoinatEri.php">Coin News</a></li>
+            <li><a href="Insights.php">Insights</a></li>
             <li> <a href="logout.php">Log out</a></li> 
-             <li><a href="../view/dashboard.php" class="<?php// echo $hide ?>">Dashboard</a></li> 
+             <li><a href="../view/dashboard.php" class="<?php echo $hide ?>">Dashboard</a></li> 
         </ul>
         </div>
         <div class="signin">
         <ul>
             <li><a href=""><?php
-  //  echo "UserName: ".$_SESSION['username'];
+    echo "UserName: ".$_SESSION['username'];
     ?></a></li>
         </ul>
     </div>
         
         </div>
     
-<form action="#" method="post" enctype="multipart/form-data">
+<form action="#" method="post" class="<?php echo $hide ?>"  enctype="multipart/form-data">
 <input type="hidden" name="size" value="1000000">
 <div>
     <input type="file" name="image" class="descriptiontext">
 </div>
 <div>
-    <textarea name="text"  cols="40" rows="4" placeholder="Pershkrimi....." class=""></textarea>
+    <textarea name="text"  cols="40" rows="4" placeholder="Pershkrimi....." class="textarea"></textarea>
 </div>
 <div>
-    <input type="submit" name="upload" value="Upload image" onclick="return mess();">
+    <input type="submit" name="upload" value="Upload image" id="UploadImg" onclick="return mess();">
 </div>
 
+
 </form>
+<script type="text/javascript">
+
+    function mess(){
+        alert("Uploading image successful");
+        return true;
+    }
+</script>
 
 <div id="content">
 
@@ -97,13 +123,6 @@ if(!empty($msg)){
 
 
 </div>
-<script type="text/javascript">
-
-    function mess(){
-        alert("Uploading image successful");
-        return true;
-    }
-</script>
 
 
 <footer >
@@ -182,3 +201,7 @@ if(!empty($msg)){
     
 </body>
 </html>
+
+<?php
+}
+?>

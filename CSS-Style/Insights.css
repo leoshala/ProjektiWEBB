@@ -52,18 +52,18 @@ color: rgba(0, 0, 0, 0.952);
 .signin{
   margin-right:20px;
 }
+
 #content{
-    border: 3px solid #802f2f;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
     margin-left: 5%;
     margin-right: 5%;
+    margin-top: 10%;
 
 }
 #img_div{
-    border: 3px solid #802f2f;
-    width: 100%;
+    width: 90%;
     height: 70%;
 
 }
@@ -71,6 +71,16 @@ img{
  width:100%;
  height: 100%;
 
+}
+.textarea{
+  border: 0px;
+  background-color: #09003f;
+  color: #ffffff;
+}
+#UploadImg{
+  border: 0px;
+    background-color: #242525;
+    color: #ffffff;
 }
 .descriptiontext{
     color: #ffffff;

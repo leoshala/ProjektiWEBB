@@ -33,6 +33,7 @@ if(!isset($_SESSION['email'])){
             <li><a href="About.php">About Us</a></li>
             <li><a href="News.php">News</a></li>
             <li><a href="CoinatEri.php">Coin News</a></li>
+            <li><a href="Insights.php">Insights</a></li>
             <li> <a href="logout.php">Log out</a></li> 
              <li><a href="../view/dashboard.php" class="<?php echo $hide ?>">Dashboard</a></li> 
         </ul>

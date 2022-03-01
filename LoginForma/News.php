@@ -34,18 +34,26 @@ if(!isset($_SESSION['email'])){
           </div>
         </div>
         <div class="menu">
+        <div class="signin">
+        <ul>
+            <li><a href=""><?php
+    echo "UserName: ".$_SESSION['username'];
+    ?></a></li>
+        </ul>
+    </div>
           <ul>
-            <li><a href="index.php">HOME</a></li>
+            <li><a href="index.php">OLEKS</a></li>
             <li><a href="#">NEWS</a></li>
             <li><a href="About.php">About</a></li>
             <li><a href="CoinatEri.php">Coins News</a></li>
           </ul>
           <ul>
+          <li><a href="Insights.php">Insights</a></li>
           <li> <a href="logout.php">Log out</a></li> 
-             <li><a href="../view/dashboard.php" class="<?php echo $hide ?>">Dashboard</a></li> 
+          <li><a href="../view/dashboard.php" class="<?php echo $hide ?>">Dashboard</a></li> 
          
           </ul>
-        </div>
+    
       </header>
     </div>
    

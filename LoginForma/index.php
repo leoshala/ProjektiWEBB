@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../CSS-Style/stili.css">
+        <link rel="stylesheet" href="../CSS-Style/index.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
 </head>
@@ -12,7 +12,7 @@
     <div id="header">
         <div id="headM">
        <ul>
-           <li>OLEKS</li>
+       <li><a href="index.php">OLEKS</a></li>
        </ul>
    </div>
            <div id="headD">
@@ -20,6 +20,7 @@
             <li><a href="About.php">About Us</a></li>
             <li><a href="News.php">News</a></li>
             <li><a href="CoinatEri.php">Coin News</a></li>
+            <li><a href="Insights.php">Insights</a></li>
 
         </ul>
         </div>
