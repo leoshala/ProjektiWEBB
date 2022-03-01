@@ -18,7 +18,7 @@ if(!isset($_SESSION['email'])){
 <html>
   <head>
     <title>Webpage</title>
-    <link rel="stylesheet" href="news.css" />
+    <link rel="stylesheet" href="../CSS-Style/news.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
