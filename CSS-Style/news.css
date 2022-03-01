@@ -5,17 +5,38 @@ body {
   height: 100%;
 
   padding: 0;
-  background-color: #1f2033;
+  background: linear-gradient(270deg, #00020f, #000d54, #00137d, #00137d);
+  background-size: 800% 800%;
+
+  -webkit-animation: AnimationName 6s ease infinite;
+  -moz-animation: AnimationName 6s ease infinite;
+  animation: AnimationName 6s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:0% 49%}
+  50%{background-position:100% 52%}
+  100%{background-position:0% 49%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:0% 49%}
+  50%{background-position:100% 52%}
+  100%{background-position:0% 49%}
+}
+@keyframes AnimationName {
+  0%{background-position:0% 49%}
+  50%{background-position:100% 52%}
+  100%{background-position:0% 49%}
 }
 .bg {
-  background: linear-gradient(281deg, #1648df, #2b015a);
-  padding-bottom: 300px;
+  
+  padding-bottom: 180px;
 }
 .navbar {
   margin: auto;
   display: grid;
   grid-template-columns: 150px auto 150px;
-  margin-bottom: 20px;
+  margin-bottom: 20x;
   padding-bottom: 20px;
 }
 
@@ -37,7 +58,6 @@ body {
   justify-content: center;
 }
 .shibut {
-  width: 100%;
   height: 700px;
 }
 ul {
@@ -130,7 +150,7 @@ h1 {
 .get {
   border: 2px solid rgb(31, 11, 105);
   color: rgb(231, 224, 224);
-  background-image: linear-gradient(281deg, #546085, #4d04a0);
+  background-image: linear-gradient(281deg, #3006ad, #000b70);
   border-radius: 25px;
   width: 15%;
   text-align: center;
