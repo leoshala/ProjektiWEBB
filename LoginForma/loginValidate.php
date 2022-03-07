@@ -11,21 +11,30 @@ if(isset($_POST['loginBtn'])){
 
 
 
-       include_once 'users.php';
-  //   include_once '../repository/userRepository.php';
+      include_once 'users.php';
+  //  include_once '../repository/userRepository.php';
       //  include_once '../view/dashboard.php';
 
     
         //$users=array();
 
-     // $userRepository = new UserRepository();
+    //  $userRepository = new UserRepository();
 
-     // $users = $userRepository->getAllUsers();
+    //  $users = $userRepository->getUserByEmail($email);
 
     //$email = $_POST['email'];
     //  $password = $_POST['password'];
     //  $userrole = $_POST['userrole'];
 
+  /*  if(empty($user)){
+        echo "Username or Password is Incorrect!";
+    }else{
+        if($user[5]==$password){
+            header("location:About.php");
+        }else{
+            echo "Username or Password is Incorrect";
+        }
+    }*/
 
 
        foreach($users as $user){
