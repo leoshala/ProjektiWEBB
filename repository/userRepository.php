@@ -34,6 +34,20 @@ class UserRepository{
 
     }
 
+    function getUserByEmail($email){
+        $conn = $this->connection;
+
+        $sql = "SELECT * FROM user WHERE email = '$email'";
+
+        if($statement = $conn->query($sql)){
+            $result = $statement->fetch_row();
+
+            return $result;
+        }else{
+            return null;
+        }
+    }
+
     function getAllUsers(){
         $conn = $this->connection;
 
