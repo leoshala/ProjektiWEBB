@@ -14,7 +14,7 @@ if(isset($_POST['registerBtn'])){
         $password = $_POST['password'];
         $birthday = $_POST['birthday'];
         $tel = $_POST['tel'];
-        $userrole = $_POST['userrole'];
+        $userrole = 'user';
         $id = rand(100,999);
         
 
