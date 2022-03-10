@@ -9,7 +9,7 @@
 <body>
     
 
-<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" class="form">
+<form action="../LoginForma/LogIn.php" method="post" class="form">
 <div class="form2">
     <div class="form1">
          <p>Name:</p>
@@ -51,7 +51,9 @@
  
 
 ?>
-<script class="script">
+<script class="script" >
+
+
   var button = document.getElementById("button1");
 
    var nameMsg = document.getElementById("nameMsg");

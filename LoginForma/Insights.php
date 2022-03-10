@@ -16,6 +16,8 @@ if(!isset($_SESSION['email'])){
 
 
 <?php
+
+
 $msg="";
 if(isset($_POST['upload'])){
 
@@ -116,6 +118,7 @@ if(!empty($msg)){
             echo "<div id='img_div'>";
             echo "<img src='../img/".$row['img']."' >";
             echo "<p class='descriptiontext'>".$row['description']."</p>";
+            echo "<a href='../view/deleteFoto.php?id=$row[id]' class='<?php echo $hide ?>'>Delete</a>";
             echo "</div>";
         }
 

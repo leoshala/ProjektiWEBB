@@ -1,3 +1,18 @@
+<?php
+$hide="";
+session_start();
+if(!isset($_SESSION['email'])){
+    header("location:LogIn.php");
+}else{
+    if($_SESSION['role'] == "admin" ){
+        $hide = "";
+    }else{
+        $hide = "hide";
+    }
+
+
+?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +22,7 @@
     <link rel="stylesheet" href="RegisterForm.css">
 </head>
 <body>
-<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" class="form">
+<form action="../LoginForma/CoinatEri.php" method="post" class="form">
 <div class="form2">
     <div class="form1">
          <p>Name:</p>
@@ -135,3 +150,6 @@
             </script>
 </body>
 </html>
+<?php
+}
+?>

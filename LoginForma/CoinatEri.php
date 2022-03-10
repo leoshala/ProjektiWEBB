@@ -41,6 +41,7 @@ if(!isset($_SESSION['email'])){
             <li><a href="Insights.php">Insights</a></li>
             <li> <a href="logout.php">Log out</a></li> 
             <li><a href="../view/dashboard.php" class="<?php echo $hide ?>">Dashboard</a></li> 
+            <li><a href="../view/RegsiterCoin.php" class="<?php echo $hide ?>">Register Coin</a></li> 
         </ul>
         </div>
         <div class="signin">
