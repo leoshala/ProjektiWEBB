@@ -196,7 +196,7 @@
                 }
             }
             
-        / if(birthday == "" || birthday == null){
+         if(birthday == "" || birthday == null){
                 birthdayMsg.innerText="Fill birthday field!";
                 event.preventDefault();
             }else{

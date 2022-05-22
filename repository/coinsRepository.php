@@ -17,7 +17,7 @@ class CoinsRepository{
         $id = $coins->getId();
         $name = $coins->getName();
         $price = $coins->getPrice();
-        $marketcap = $coins->getMarcetCap();
+        $marketcap = $coins->getMarketCap();
         $volume = $coins->getVolume();
         $totalsupply = $coins->getTotalSupply();   
  
